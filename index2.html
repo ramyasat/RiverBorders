@@ -23,9 +23,28 @@ mapboxgl.accessToken = 'pk.eyJ1IjoicmFteXNhdCIsImEiOiJjazdxYjRibW0wMWxkM2tuejE2Z
 var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/ramysat/ck7sgollb3gpa1js7xy12darf',
-	center: [-77.38, 39], 
-zoom: 2 
+	center: center: [-87.661557, 41.893748],
+      zoom: 3
+    }); 
+map.on('click', function(e) {
+  var features = map.queryRenderedFeatures(e.point, {
+    layers: 'mapbox://styles/ramysat/ck7sgollb3gpa1js7xy12darf',
+  });
+
+  if (!features.length) {
+    return;
+  }
+
+  var feature = features[0];
+
+  var popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML('<h3>' + feature.properties.point + '</h3><p>' + feature.properties.description + '</p>')
+    .addTo(map);
 });
+	
+	
+	
 	map.on('load', function() {
 map.addSource('places', {
 'type': 'geojson',
