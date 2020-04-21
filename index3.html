@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+<title>River Borders</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+	.customNavBar {
+            position:absolute;
+            top: 10px;
+            right: 10px;
+        }
+</style>
+	</head>
+	<body>
+<div id="map"></div>
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoicmFteXNhdCIsImEiOiJjazdxYjRibW0wMWxkM2tuejE2ZDBsYTN5In0.Req0KI0TEVaBHNnDaagzLA';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/ramysat/ck7sgollb3gpa1js7xy12darf',
+	center: center: [-87.661557, 41.893748],
+      zoom: 3
+    }); 
+map.on('click', function(e) {
+  var features = map.queryRenderedFeatures(e.point, {
+    layers: 'mapbox://styles/ramysat/ck7sgollb3gpa1js7xy12darf',
+  });
+
+  if (!features.length) {
+    return;
+  }
+
+  var feature = features[0];
+
+  var popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML('<h3>' + feature.properties.point + '</h3><p>' + feature.properties.description + '</p>')
+    .addTo(map);
+});
+	
+</script>
+</body>
+</html>
