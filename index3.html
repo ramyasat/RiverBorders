@@ -1,74 +1,36 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8" />
-<title>River Borders</title>
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
-<link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
-	
-	
-	
-<style>
-	body { 
-	margin: 0; 
-	padding: 0; 
-	}
-	
-	#map { 
-	position: absolute; 
-	top: 0; 
-	bottom: 0; 
-	width: 100%; 
-	}
-	.customNavBar {
-            position:absolute;
-           top: 0;
+  <head>
+    <meta charset='utf-8' />
+    <title>Points on a map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        position: absolute;
+        top: 0;
         bottom: 0;
-        width: 100%;	
-        }
-</style>
-</head>
-<body>
-<div id='map'></div>
-	
-
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoicmFteXNhdCIsImEiOiJjaXU5dHF5bzkwMDgwMnlxbXBqN2gyZHFxIn0.a1OCCJrEbzxQ4cJjtqRrew';
-var map = new mapboxgl.Map({
-container: 'map',
-style: 'mapbox://styles/ramysat/ck7sgollb3gpa1js7xy12darf',
-	center: center: [-83.1719, 42.1232],
-      zoom: 2
-    }); 
-map.on('click', function(e) {
-  var features = map.queryRenderedFeatures(e.point, {
-    layers: 'mapbox://styles/ramysat/ck7sgollb3gpa1js7xy12darf',
-  });
-
-  if (!features.length) {
-    return;
-  }
-
-  var feature = features[0];
-
-  var popup = new mapboxgl.Popup({ offset: [0, -15] })
-    .setLngLat(feature.geometry.coordinates)
-    .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
-    .addTo(map);
-});
-	
-	<div class="customNavBar">
-            <input type="button" value= "About" onclick="window.location.href = 'About.html';" /> 
-            <input type="button" value="River Borders in History" onclick="window.location.href = 'RiverBorders1.html';" />
-            <input type="button" value="North American River Borders" onclick="window.location.href = 'RiverBorders2.html';" />
-            <input type="button" value="More on Borders" onclick="window.location.href = 'Bibliography.html';" />
-            <input type="button" value="Contact" onclick="window.location.href = 'Contact.html';" />
-	    
-        </div>
-    </div>
-
-	
-</script>
-</body>
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='map'></div>
+    <script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoicmFteXNhdCIsImEiOiJjaXU5dHF5bzkwMDgwMnlxbXBqN2gyZHFxIn0.a1OCCJrEbzxQ4cJjtqRrew';
+	    var map = new mapboxgl.Map({
+      container: 'map',
+		    style: 'mapbox://styles/ramysat/ck7sgollb3gpa1js7xy12darf', 
+		    center: [-87.661557, 41.893748],
+      zoom: 10.7
+    });
+    
+    </script>
+  </body>
 </html>
+
