@@ -29,13 +29,13 @@
 	mapboxgl.accessToken = 'pk.eyJ1IjoicmFteXNhdCIsImEiOiJjaXU5dHF5bzkwMDgwMnlxbXBqN2gyZHFxIn0.a1OCCJrEbzxQ4cJjtqRrew';
 	    var map = new mapboxgl.Map({
       container: 'map',
-		    style: 'mapbox://styles/ramysat/ck7sgollb3gpa1js7xy12darf', 
+		    style: 'mapbox://styles/ramysat/ck9appqby22gh1iplmukywmk2', 
 		    center: [-83.1719, 42.1232],
       zoom: 10.7
     });
 	    map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
-    layers: ['border-rivers-april-21-3'] 
+    layers: ['border-rivers-try-1'] 
   });
 
   if (!features.length) {
