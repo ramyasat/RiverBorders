@@ -19,12 +19,26 @@
         bottom: 0;
         width: 100%;
       }
-.customNavBar {
-            position:hover;
-           top: 0;
-        bottom: 0;
-        width: 100%;	
-        }
+<header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">Transparent Nav</a>
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+            
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">River Borders in History</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">River Borders in North America</a></li>
+                     <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">More about River Borders</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
     </style>
   </head>
   <body>
@@ -59,17 +73,59 @@
 
     </script>
 	  
-	  <div class="customNavBar">
-            <input type="button" value= "About" onclick="window.location.href = 'About.html';" /> 
-            <input type="button" value="River Borders in History" onclick="window.location.href = 'RiverBorders1.html';" />
-            <input type="button" value="North American River Borders" onclick="window.location.href = 'RiverBorders2.html';" />
-            <input type="button" value="More on Borders" onclick="window.location.href = 'Bibliography.html';" />
-            <input type="button" value="Contact" onclick="window.location.href = 'Contact.html';" />
-	    
-        </div>
-  <fieldset style="width:800px;margin-top:10px;">
-    </fieldset>
-	<a class="btn" href="#url" role="button">Link button</a>
+	.navbar {
+    transition: all 0.4s;
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+}
+
+
+/* Change navbar styling on scroll */
+.navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active .nav-link {
+    color: #555;
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #fff;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #555;
+    }
+}
+
+
+
   </body>
 </html>
 
