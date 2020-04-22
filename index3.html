@@ -19,61 +19,7 @@
         bottom: 0;
         width: 100%;
       }
-<header class="header">
-    <nav class="navbar navbar-expand-lg fixed-top py-3">
-        <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">Transparent Nav</a>
-            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
-            
-            <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">River Borders in History</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">River Borders in North America</a></li>
-                     <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">More about River Borders</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-
-    </style>
-  </head>
-  <body>
-  <div id='map'></div>
-	  
-	   
-    <script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoicmFteXNhdCIsImEiOiJjaXU5dHF5bzkwMDgwMnlxbXBqN2gyZHFxIn0.a1OCCJrEbzxQ4cJjtqRrew';
-	    var map = new mapboxgl.Map({
-      container: 'map',
-		    style: 'mapbox://styles/ramysat/ck9appqby22gh1iplmukywmk2', 
-		    center: [-82.9743, 42.3433],
-      zoom: 10.7
-    });
-	    map.on('click', function(e) {
-  var features = map.queryRenderedFeatures(e.point, {
-    layers: ['border-rivers-try-1'] 
-  });
-
-  if (!features.length) {
-    return;
-  }
-
-  var feature = features[0];
-
-  var popup = new mapboxgl.Popup({ offset: [0, -15] })
-    .setLngLat(feature.geometry.coordinates)
-    .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
-    .addTo(map);
-});
-	    
-
-    </script>
-	  
-	.navbar {
+	    .navbar {
     transition: all 0.4s;
 }
 
@@ -123,6 +69,61 @@
         color: #555;
     }
 }
+
+
+
+    </style>
+  </head>
+  <body>
+  <div id='map'></div>
+	  
+	   
+    <script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoicmFteXNhdCIsImEiOiJjaXU5dHF5bzkwMDgwMnlxbXBqN2gyZHFxIn0.a1OCCJrEbzxQ4cJjtqRrew';
+	    var map = new mapboxgl.Map({
+      container: 'map',
+		    style: 'mapbox://styles/ramysat/ck9appqby22gh1iplmukywmk2', 
+		    center: [-82.9743, 42.3433],
+      zoom: 10.7
+    });
+	    map.on('click', function(e) {
+  var features = map.queryRenderedFeatures(e.point, {
+    layers: ['border-rivers-try-1'] 
+  });
+
+  if (!features.length) {
+    return;
+  }
+
+  var feature = features[0];
+
+  var popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
+    .addTo(map);
+});
+	    
+
+    </script>
+	  
+	<header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold">Transparent Nav</a>
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+            
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">River Borders in History</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">River Borders in North America</a></li>
+                     <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">More about River Borders</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
 	  $(function () {
     $(window).on('scroll', function () {
