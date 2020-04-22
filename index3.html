@@ -11,8 +11,6 @@
         padding: 0;
       }
 
-   
-
       #map {
         position: absolute;
         top: 0;
@@ -44,32 +42,6 @@
   <body>
   <div id='map'></div>
 	  
-
-    <script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoicmFteXNhdCIsImEiOiJjaXU5dHF5bzkwMDgwMnlxbXBqN2gyZHFxIn0.a1OCCJrEbzxQ4cJjtqRrew';
-	    var map = new mapboxgl.Map({
-      container: 'map',
-		    style: 'mapbox://styles/ramysat/ck9appqby22gh1iplmukywmk2', 
-		    center: [-82.9743, 42.3433],
-      zoom: 10.7
-    });
-	    map.on('click', function(e) {
-  var features = map.queryRenderedFeatures(e.point, {
-    layers: ['border-rivers-try-1'] 
-  });
-
-  if (!features.length) {
-    return;
-  }
-
-  var feature = features[0];
-
-  var popup = new mapboxgl.Popup({ offset: [0, -15] })
-    .setLngLat(feature.geometry.coordinates)
-    .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
-    .addTo(map);
-});
-	    
 	    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 html {
@@ -109,6 +81,32 @@ nav ul li a:hover {
   background: rgba(255, 255, 255, 0.1);
   color: rgba(0, 35, 122, 0.7);
 }
+
+    <script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoicmFteXNhdCIsImEiOiJjaXU5dHF5bzkwMDgwMnlxbXBqN2gyZHFxIn0.a1OCCJrEbzxQ4cJjtqRrew';
+	    var map = new mapboxgl.Map({
+      container: 'map',
+		    style: 'mapbox://styles/ramysat/ck9appqby22gh1iplmukywmk2', 
+		    center: [-82.9743, 42.3433],
+      zoom: 10.7
+    });
+	    map.on('click', function(e) {
+  var features = map.queryRenderedFeatures(e.point, {
+    layers: ['border-rivers-try-1'] 
+  });
+
+  if (!features.length) {
+    return;
+  }
+
+  var feature = features[0];
+
+  var popup = new mapboxgl.Popup({ offset: [0, -15] })
+    .setLngLat(feature.geometry.coordinates)
+    .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
+    .addTo(map);
+});
+	    
 
     </script>
   </body>
