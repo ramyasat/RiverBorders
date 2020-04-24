@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+html { 
+  background: url(archival.jpg) no-repeat center fixed; 
+  background-size: cover;
+  width: 100%; 
+}
+   
+body { 
+    color: white;
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;   
+}
+  
+  #about {
+    background-color: #000000;
+    width: 500px;
+    border: 25px #000000;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    overflow: scroll;
+    background color:#eee;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    line-height: 200%;
+}
+ 
+   h2 {
+    font-family: "Lato", sans-serif; 
+    font-size: 20px;
+}
+  h2 a:link{
+  color: #818181;
+  }
+h2 a:hover{
+  color: #d8d8d8;
+  } 
+h2 a:visited{
+  color: #f2f2f2;
+  } 
+  
+   h1 {
+    padding-top: -10px;
+    padding-right: 30px;
+    padding-bottom: 80px;
+    padding-left: 80px;
+    font-family: "Lato", sans-serif; 
+    text-align: center;
+    font-size: 50px;
+}
+    
+/*.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}*/
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+.sidenav a:link{
+  color: #818181;
+  }
+.sidenav a:hover{
+  color: #d8d8d8;
+  }
+  
+.sidenav a:visited{
+  color: #f2f2f2;
+  } 
+  
+  
+  /*.
+.sidenav a:hover {
+   color: #d8d8d8;
+}
+.sidenav a:link {
+   color: #818181;
+}
+  
+.sidenav a:visited {
+  color: #f2f2f2;
+  }
+  }*/
+  
+.sidenav .closebtn {
+    position: inline;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    font-color: #818181;
+    margin-left: 100px;
+  }    
+  
+  /*}transition: margin-left .5s;
+}*/ 
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  }
+  a:link {
+    color: #818181;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:visited {
+    color: #f2f2f2;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:hover {
+    color: #d8d8d8;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: #818181;
+    background-color: transparent;
+    text-decoration: underline;
+}
+</style>
+</head>
+  
+<body>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="about.html">About the project</a>
+  <a href="archival.html">Archival Sources</a>
+  <a href="aboutme.html">The Confused Grad student attempting this?</a>
+  <a href="newspaper.html">Media coverage about Norris</a>
+  <a href="tvastuff.html">TVA generated material</a>
+  <a href="pressrelease.html">Press Releases</a>
+  <a href="essays.html">Essays about Norris</a>
+  <a href="rationale.html">Rationale of Typologies</a>
+  <a href="typologies.html">Understanding Housing Typologies through Construction History</a>
+  <a href="plans.html">Plans</a>
+  <a href="elevations.html"> Elevations</a>
+  <a href="housingtypes.html"> Rent Schedules</a>
+  <a href="photos1.html">Photos from the FSA</a>
+  <a href="companytowns1.html">Brief History of Company Towns</a>
+  <a href="companytowns2.html">Other sources</a>
+
+  
+  
+</div>
+  
+  <h2>
+    <a href=index.html>NorrisTown</a></h2>
+ 
+  <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;more </span>
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+ 
+ <h1>About me</h1>
+<div id="about">  
+  Hello! I am the confused grad student attempting this. I have long been interested in cities and infrastructure.
+  Norris is particularly interesting because of its place in American urban planning history. In the past year, I have come to learn a lot about Norris. 
+  I look forward to your feedback. Any content addition/suggestions would be most welcome! 
+  <br />
+  <br />You can find out more about my doctoral project <a href="http://history.msu.edu/people/graduate-students/ramya-swayamprakash/"> here</a></div> 
+
+
+</body>
+</html>
