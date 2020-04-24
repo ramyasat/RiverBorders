@@ -3,7 +3,7 @@
 <head>
 <style> 
 html { 
-  background: url(DetroitRiver1.jpg) no-repeat center fixed; 
+  background: url(DetroitRiver1.JPG) no-repeat center fixed; 
   background-size: cover;
   width: 100%; 
 }
@@ -71,7 +71,7 @@ h2 a:visited{
     padding-top: 60px;
 }*/
   
-  .sidenav {
+ /* .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
@@ -118,7 +118,7 @@ h2 a:visited{
   }
   }*/
   
-.sidenav .closebtn {
+/*.sidenav .closebtn {
     position: inline;
     top: 0;
     right: 25px;
@@ -129,7 +129,7 @@ h2 a:visited{
   
   /*}transition: margin-left .5s;
 }*/ 
-@media screen and (max-height: 450px) {
+/*@media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
   }
@@ -153,37 +153,62 @@ a:active {
     background-color: transparent;
     text-decoration: underline;
 }
+  */
+  .dropbtn {
+  background-color: #D3D3D3;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.9);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #D3D3D3;}
 </style>
 </head>
   
 <body>
-  <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="index4.html">Home</a>
-  <a href="About.html">About</a>
-  <a href="RiverBorders1.html">River Borders in history</a>
-  <a href="RiverBorders2.html">North American River Borderss</a>
-  <a href="Bibliography.html">More on Borders</a>
-  <a href="Contact.html">Contact</a>
 
-  
-</div>
+  <div class="dropdown">
+  <button class="dropbtn">River Borders</button>
+  <div class="dropdown-content">
+    <a href="About.html">About</a>
+    <a href="RiverBorders1.html">River Borders in history</a>
+	  <a href="RiverBorders2.html">North American River Borders</a>
+    <a href="Bibliography.html">More on Borders</a>
+    <a href="Contact.html">Contact</a>
+  </div>
+
   
   <h2>
     <a href=index4.html>RiverBorders</a></h2>
  
   <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;more </span>
 
-
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
-}
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-</script>
- 
  <h1>About River Borders and the author </h1>
 <div id="about">  
   River Borders is a an attempt to create a database of river borders across the world. The points on the map are the labels of the border rivers. Some of these labels have more information about the rivers themselves. This is an evolving list. 
