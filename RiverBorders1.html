@@ -2,58 +2,30 @@
 <html>
 <head>
 <style> 
- *, *::before, *::after {
-  box-sizing: border-box;
-}
-	{
-  font-size: 100%;
-}
-body {
-  background-color: #000000;
-  font-family: "Lato", sans-serif;;
-  color: #ffffff;
-  line-height: 1.5;
-}
-
-.background { 
-  position: relative; 
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url('World.jpg');
+ { 
+  background: url(World.jpg) no-repeat center fixed; 
   background-size: cover;
-  
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(169,169,169,0.75);
-  }
-}
-
-h1 {
-  position: relative;
-  color: #ffffff;  
-  font-size: 70px;
-  line-height: 0.9;
-  text-align: center;
-}
-
+  width: 100%; 
+	}
+	
 body { 
     color: white;
     font-family: "Lato", sans-serif;
-   transition: background-color .5s;  
+    transition: background-color .5s;   
 }
-  
-  #about {
+
+	 .holder{
+    width: 100%;
+  height: 100%;
+position: absolute;
+    
+}
+
+
+  .about {
     position: top-right;
     background-color: #A9A9A9;
-    width: 500px;
+    width: 900px;
     border: 25px #000000;
     padding-top: 50px;
     padding-right: 30px;
@@ -85,6 +57,16 @@ h2 a:visited{
   color: #f2f2f2;
   } 
   
+	h1 {
+    padding-top: -10px;
+    padding-right: 30px;
+    padding-bottom: 80px;
+    padding-left: 80px;
+    font-family: "Lato", sans-serif; 
+    text-align: center;
+    font-size: 50px;
+    text-color: #A9A9A9;
+}
     
 
   .dropbtn {
@@ -145,12 +127,10 @@ img {
     <a href="Contact.html">Contact</a>
   </div>
 
-
-<div class="background">
-  <h1>River Borders: A Very Short Primer</h1>
-</div>
-
-<div id="about">  	
+ <h1>River Borders: A Very Short Primer</h1>
+<div class="holder">
+ 
+<dic class="about">  	
 <br />
   Rivers, much like other natural features such as mountains, form barriers. In the 19th and 20th centuries, as nation states came into their own, these barriers acted as environmental border drawing allies. According to Transboundary Freshwater Dispute Database at Oregon State University, there are currently 310 international river basins across the world. This <a href="https://transboundarywaters.science.oregonstate.edu/database-and-research/galleries/global-map-gallery/"> map</a> shows the river basins across the world. 
 	 <br />
@@ -193,5 +173,7 @@ Donaldson, J.W. 2011. Paradox of the moving boundary: Legal heredity of river ac
 <br />
 Border river basin map provided as product of the Transboundary Freshwater Dispute Database, College of Earth, Ocean, and Atmospheric Sciences, Oregon State University. Additional information about the TFDD can be found at: http://transboundarywaters.science.oregonstate.edu.
 
+	</div>
+	</div>
 </body>
 </html>
