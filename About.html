@@ -3,7 +3,7 @@
 <head>
 <style> 
 html { 
-  background: url(DetroitRiver1.JPG) no-repeat center fixed; 
+  background:linear-gradient(0deg, rgba(169, 169, 169, 0.8), rgba(169, 169, 169, 0.8)), url(DetroitRiver1.JPG) no-repeat center fixed; 
   background-size: cover;
   width: 100%; 
 }
@@ -16,7 +16,7 @@ body {
   
   #about {
     background-color: #000000;
-    width: 1200px;
+    width: 900px;
     border: 25px #000000;
     padding-top: 50px;
     padding-right: 30px;
@@ -24,7 +24,7 @@ body {
     padding-left: 28px;
     font-family: "Lato", sans-serif;
     text-align: left;
-    font-size: 30px;
+    font-size: 20px;
     overflow: scroll;
     background color:#eee;
     margin-top: 80px;
@@ -58,121 +58,58 @@ h2 a:visited{
     font-size: 50px;
 }
     
-/*.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #000000;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}*/
-  
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    text-align: center;
-    font-family: "Lato", sans-serif;
+  .dropbtn {
+  background-color: #D3D3D3;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
 }
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
+
+.dropdown {
+  position: left;
+  display: inline-block;
 }
-.sidenav a:link{
-  color: #818181;
-  }
-.sidenav a:hover{
-  color: #d8d8d8;
-  }
-  
-.sidenav a:visited{
-  color: #f2f2f2;
-  } 
-  
-  
-  /*.
-.sidenav a:hover {
-   color: #d8d8d8;
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(255,255,255,0.9);
+  z-index: 1;
 }
-.sidenav a:link {
-   color: #818181;
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #D3D3D3;}
   
-.sidenav a:visited {
-  color: #f2f2f2;
-  }
-  }*/
-  
-.sidenav .closebtn {
-    position: inline;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    font-color: #818181;
-    margin-left: 100px;
-  }    
-  
-  /*}transition: margin-left .5s;
-}*/ 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-  }
-  
+
 </style>
 </head>
   
 <body>
-  <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-   <a href="about.html">About the project</a>
-  <a href="archival.html">Archival Sources</a>
-  <a href="aboutme.html">The Confused Grad student attempting this?</a>
-  <a href="newspaper.html">Media coverage about Norris</a>
-  <a href="tvastuff.html">TVA generated material</a>
-  <a href="pressrelease.html">Press Releases</a>
-  <a href="essays.html">Essays about Norris</a>
-  <a href="rationale.html">Rationale of Typologies</a>
-  <a href="typologies.html">Understanding Housing Typologies through Construction History</a>
-  <a href="plans.html">Plans</a>
-  <a href="elevations.html"> Elevations</a>
-  <a href="housingtypes.html"> Rent Schedules</a>
-  <a href="photos1.html">Photos from the FSA</a>
-  <a href="companytowns1.html">Brief History of Company Towns</a>
-  <a href="companytowns2.html">Other sources</a>
-  
-</div>
-  
-  <h2>
-    <a href=index.html>NorrisTown</a></h2>
- 
-  <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;more </span>
 
+  <div class="dropdown">
+  <button class="dropbtn">River Borders</button>
+  <div class="dropdown-content">
+	   <a href="index.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="RiverBorders1.html">River Borders: A Very Short Primer</a>
+	  <a href="RiverBorders2.html">North American River Borders</a>
+    <a href="Bibliography.html">More on Borders</a>
+    <a href="Contact.html">Contact</a>
+  </div>
 
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
-}
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
-</script>
- 
  <h1>About River Borders</h1>
 <div id="about">This website is a database of river borders across the world. You can click on an icon and learn the river’s name. In the case of some rivers, you will learn more about the individual border river. Wherever possible, there are external resources and links in the pop-up itself. This website is meant to be a teaching tool. By aggregating all the river borders in the world, it attempts to show how rivers have made historical bordering allies. Being able to look at all the river borders in the world also gives the viewer a sense of the sheer number of border rivers as well as their locations. However, the individual river markers are meant to remain true to the particularities of a border river because after all, all borders and all river borders are particular. 
   <br />
@@ -190,7 +127,7 @@ As much as possible, the pop-ups offer historical and environmental context abou
 
   <br />
 <br />
-This website was built using a variety of platforms and technologies. The intellectual backbone of the website is the International River Boundaries Database <a href="www.dur.ac.uk/ibru/resources/irbd/">(IBRD)</a> at Durham University. This database contains information about river borders across the world, including GoogleEarth files wherever available. It is a database of all recognized and de-facto boundaries across the world. The latter category is important because it recognizes the iterative nature of borders, especially when they are drawn along or across rivers. As a searchable database, the IRBD is an a phenomenal source of knowledge. However, visually, it is does not allow the user to sit back and look at river borders in a regional, national, and/or global context. Hence the need for this website. Much like the IRBD, this website is also a dynamic database. Because the IRBD estimates river borders using GoogleEarth, particularly contested or uncontested rivers are hard to map, because they do not often show up on public maps. For example, the Myanmar-India border, according to IRBD consists of 43 river sections. However, most of these are not highlighted on any public maps, so the IRBD doesn’t have GoogleEarth files for these. Despite my own attempts to find these sections, I have only been able to highlight nine on this website. There are many other examples like this. These limitations only further highlight how fluid river borders are. 
+The intellectual backbone of the website is the International River Boundaries Database <a href="www.dur.ac.uk/ibru/resources/irbd/">(IBRD)</a> at Durham University containing information about river borders (both recognized and de-facto) across the world, including GoogleEarth files wherever available. The latter category is important because it recognizes the iterative nature of borders, especially when they are drawn along or across rivers. As a searchable database, the IRBD is an a phenomenal source of knowledge. However, visually, it does not allow the user to sit back and analyze river borders at a regional, national, and/or global context. Much like the IRBD, this website is also a dynamic database. Because the IRBD estimates river borders using GoogleEarth, particularly contested or uncontested rivers are hard to map, because they do not often show up on public maps. For example, the Myanmar-India border, according to IRBD consists of 43 river sections. However, most of these are not highlighted on any public maps, so the IRBD doesn’t have GoogleEarth files for these. Despite my own attempts to find these sections, I have only been able to highlight nine on this website. There are many other examples like this. These limitations only further highlight how fluid river borders are. 
   <br />
 <br />
 The visual backbone of this website is formed by multiple technologies. To begin with, I used public access shape files from the <a href="https://datacatalog.worldbank.org/dataset/major-river-basins-world">World Bank</a>, the Global Runoff Data Center (part of the World Meteorological Organization) which produced the <a href="https://www.bafg.de/GRDC/EN/02_srvcs/22_gslrs/221_MRB/riverbasins_node.html">Major River Basins of the World</a>, and a shapefile of the world's border (available <a href="https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/">here</a>). In <a href="https://qgis.org/en/site/>QGIS</a>, I then layered all these shape files and began cutting them up to show all the major river borders. I cut out all the non-border rivers, to be able to highlight only the border rivers and most importantly to cut out the noise. If I did not do that, the map would be <b> extremely</b> chaotic. Once I finished doing that, I needed to export this new shapefile into <a href="https://www.mapbox.com>mapbox studio</a>. Once that was done, I went back to the IRBD to then cross reference these rivers and highlight individual rivers using pop-ups and labels. I manually entered over 900 markers and have entered descriptions i.e. pop-up information for a number of them. That is an evolving number. I hope to cover the entire globe soon. Translating the IRBD into a visual map with information was undeniably time consuming and frustrating when I accidentally broke the code. It was, more importantly, an immense learning experience because I physically mapped and marked de facto rover borders across the world. Inevitably, I ended up looking up information about border rivers that I did not know about! For example, the Shattal-al-Arab, formed by the confluence of the Tigris and Euphrates rivers is the border between Iraq and Iran near its mouth. During the first Iran-Iraq War between 1980-1988, the river was an important focal point with regards to navigation rights. During the 2003 invasion of Iraq, the river was again important as it was the only outlet to the Persian Gulf and an important waterway to transport humanitarian aid. 
