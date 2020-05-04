@@ -73,13 +73,7 @@
 		    style: 'mapbox://styles/ramysat/ck9appqby22gh1iplmukywmk2', 
 		    center: [-82.9743, 42.3433],
       zoom: 10.7
-    });
-	    
-	    var attribution = L.control.attribution();
-attribution.setPrefix('');
-attribution.addAttribution('<p>Map data: © Ramya Swayamprakash</p> | <p> Support by the <a href="http://chi.anthropology.msu.edu">Cultural Humanities Informatics Initiative</a> at Michigan State University</p>');
-attribution.addTo(map);
-	    
+    });	    
 	    map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
     layers: ['border-rivers'] 
@@ -97,10 +91,12 @@ attribution.addTo(map);
     .addTo(map);	 
 	   
 });
-	    var map = new mapboxgl.Map({attributionControl: false})
-    .addControl(new mapboxgl.AttributionControl({
-        compact: true
-    }));
+	  
+	    var attribution = L.control.attribution();
+attribution.setPrefix('');
+attribution.addAttribution('<p>Map data: © Ramya Swayamprakash</p> | <p> Support by the <a href="http://chi.anthropology.msu.edu">Cultural Humanities Informatics Initiative</a> at Michigan State University</p>');
+attribution.addTo(map);
+	    }); 
 	    
 	  </script>
 	  
