@@ -18,12 +18,8 @@
         bottom: 0;
         width: 100%;
       }
-  .mapbox-attribution-container {
-  bottom: 0;
-  right: 0;
-  position: relative;
-}
 
+	    
 .dropbtn {
   background-color: #D3D3D3;
   color: white;
@@ -92,10 +88,13 @@
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
     .setLngLat(feature.geometry.coordinates)
     .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
-    .addTo(map);
-		 
+    .addTo(map);	 
 	   
 });
+	    var map = new mapboxgl.Map({attributionControl: false})
+    .addControl(new mapboxgl.AttributionControl({
+        compact: true
+    }));
 	    
 	  </script>
 	  
