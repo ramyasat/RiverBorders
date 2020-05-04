@@ -89,10 +89,9 @@
     .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
     .addTo(map);
 });
-var credits = L.control.attribution().addTo(map);
-credits.addAttribution('Copyright © Ramya Swayamprakash | This project is supported by the <a href="http://chi.anthropology.msu.edu">Cultural Humanities Informatics initiative</a> at Michigan State University.');
+
+	    map.addControl(new mapboxgl.AddAttribution('Copyright © Ramya Swayamprakash | This project is supported by the <a href="http://chi.anthropology.msu.edu">Cultural Humanities Informatics initiative</a> at Michigan State University.')
 	    });
-	    
     </script>
 	  
 
