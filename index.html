@@ -19,6 +19,25 @@
         width: 100%;
       }
   
+	    .mapbox-attribution-container {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  display: block;
+  margin: 0 10 5;
+}
+
+.mapbox-wordmark {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 65px;
+  left: 10px;
+  bottom: 10px;
+  text-indent: -9999px;
+  z-index: 99999;
+  overflow: hidden;
+
 .dropbtn {
   background-color: #D3D3D3;
   color: white;
@@ -88,8 +107,7 @@
     .setLngLat(feature.geometry.coordinates)
     .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
     .addTo(map);
-		    var credits = L.control.attribution().addTo(map);
-credits.addAttribution('© Ramya Swayamprakash | Supported by <a href="http://chi.anthropology.msu.edu">Cultural Humanities Informatics Initiative</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>');
+		 
 	   
 });
 	    
@@ -107,6 +125,14 @@ credits.addAttribution('© Ramya Swayamprakash | Supported by <a href="http://ch
     <a href="Bibliography.html">More on Borders</a>
     <a href="Contact.html">Contact</a>
   </div>
+</div>
+	  <div id='map'>
+		  <p>Ramya Swayamprakash</p>
+ <div class="mapbox-attribution-container">
+   <a href="https://www.mapbox.com/about/maps/">© Mapbox | </a>
+   <a href="http://www.openstreetmap.org/copyright">© OpenStreetMap | </a>
+   <a href="https://www.mapbox.com/map-feedback/" target="_blank"><strong>Improve this map</strong></a>
+ </div>
 </div>
    
 	   </body>
