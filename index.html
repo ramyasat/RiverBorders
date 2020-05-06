@@ -72,8 +72,13 @@
       container: 'map',
 		    style: 'mapbox://styles/ramysat/ck9appqby22gh1iplmukywmk2', 
 		    center: [-82.9743, 42.3433],
-      zoom: 10.7
-    });	    
+      zoom: 10.7,
+		     attributionControl: false
+    })
+    .addControl(new mapboxgl.AttributionControl({
+        customAttribution: '© Ramya Swayamprakash | This site was supported by <a href="http://chi.anthropology.msu.edu">CHI at MSU</a>'
+    }));
+   ;	    
 	    map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
     layers: ['border-rivers'] 
